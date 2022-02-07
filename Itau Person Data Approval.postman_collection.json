@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Itau Person Data Approval",
+		"_postman_id": "983a0384-ae19-9269-ee07-6feb3687e9f1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Send a Person Approval Data",
+			"request": {
+				"url": "http://localhost:8090/v1/person/approval",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Romero\",\n\t\"lastName\": \"Dias\",\n\t\"age\": \"35\",\n\t\"country\": \"Brazil\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Approve a Person Data",
+			"request": {
+				"url": "http://localhost:8090/v1/person/435b93c7-fa01-457c-a556-ac5e82dab080/approve",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Find Person Approvals",
+			"request": {
+				"url": "http://localhost:8090/v1/person/on-approval",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"asdf\",\n\t\"last_name\": \"dfas\",\n\t\"age\": 123,\n\t\"country\": \"Brzil\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Reject a Person Data",
+			"request": {
+				"url": "http://localhost:8090/v1/person/40f20c98-d989-45e8-bf34-b2de9e086383/reject",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Romero\",\n\t\"lastName\": \"Dias\",\n\t\"age\": \"35\",\n\t\"country\": \"Brazil\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
